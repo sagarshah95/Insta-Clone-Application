@@ -1,0 +1,42 @@
+.login-page {
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: 65rem minmax(35rem, min-content);
+    grid-row-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 4rem;
+  
+    grid-row: 2 / span 1;
+    grid-column: center-start / center-end;
+  
+    margin-top: 15rem;
+  
+    &__showcase {
+      background: url('https://images.unsplash.com/photo-1595039838779-f3780873afdd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  
+    @include respond(tab-land) {
+      grid-template-columns: minmax(35rem, min-content);
+      &__showcase {
+        display: none;
+      }
+    }
+  
+    @include respond(phone) {
+      grid-template-columns: 100%;
+      padding: 0 4rem;
+    }
+  }
+  
+  .login-card-container {
+    & > :not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+  
